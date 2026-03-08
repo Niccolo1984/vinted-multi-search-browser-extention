@@ -83,6 +83,6 @@ Instalacja z pliku `.xpi` sprawia, że rozszerzenie jest stałe — przetrwa res
 
 *Uwaga: Aby usunąć rozszerzenie, przejdź do `about:addons` i kliknij "Usuń" obok rozszerzenia.*
 
-## Screenshots
+
 
 
