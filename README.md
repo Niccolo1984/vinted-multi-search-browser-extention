@@ -7,40 +7,40 @@ A Firefox browser extension for Vinted that lets you search for two items at onc
 ## Installation Guide (English)
 
 ### Temporary vs Permanent — What's the difference?
-* [cite_start]**Temporary Extension:** Loaded directly from a folder on your computer[cite: 2]. [cite_start]It is removed automatically every time Firefox is closed[cite: 3]. [cite_start]No installation required — just point Firefox to the `manifest.json` file[cite: 4]. [cite_start]Works on all Firefox versions without any configuration changes[cite: 6].
-* [cite_start]**Permanent Extension:** Installed once and stays active permanently, even after Firefox restarts[cite: 7]. [cite_start]Requires a one-time change in `about:config` to allow unsigned extensions (`xpinstall.signatures.required` → `false`)[cite: 9]. [cite_start]Easier to use day-to-day[cite: 10].
+* **Temporary Extension:** Loaded directly from a folder on your computer. It is removed automatically every time Firefox is closed. No installation required — just point Firefox to the `manifest.json` file. Works on all Firefox versions without any configuration changes.
+* **Permanent Extension:** Installed once and stays active permanently, even after Firefox restarts. Requires a one-time change in `about:config` to allow unsigned extensions (`xpinstall.signatures.required` → `false`). Easier to use day-to-day.
 
 ### Method 1: Install as a Temporary Extension
-[cite_start]Temporary extensions are loaded directly from a folder on your computer[cite: 47]. [cite_start]They work until you close Firefox — after that, you need to reload them manually[cite: 48].
+Temporary extensions are loaded directly from a folder on your computer. They work until you close Firefox — after that, you need to reload them manually.
 
 **Steps:**
-1. [cite_start]Open Firefox and go to: `about:debugging` (type it directly in the address bar and press Enter)[cite: 49].
-2. [cite_start]Click "This Firefox" in the left sidebar[cite: 49].
-3. [cite_start]Click the button "Load Temporary Add-on..."[cite: 50].
-4. [cite_start]Navigate to the folder where you extracted `vinted-multi-search`[cite: 50].
-5. [cite_start]Select the file: `manifest.json`[cite: 51].
-6. The extension is now active. [cite_start]You will see it listed under "Temporary Extensions"[cite: 51].
+1. Open Firefox and go to: `about:debugging` (type it directly in the address bar and press Enter).
+2. Click "This Firefox" in the left sidebar.
+3. Click the button "Load Temporary Add-on...".
+4. Navigate to the folder where you extracted `vinted-multi-search`.
+5. Select the file: `manifest.json`.
+6. The extension is now active. You will see it listed under "Temporary Extensions".
 
-[cite_start]*Note: No signing or approval is required — works with any Firefox version[cite: 54].*
+*Note: No signing or approval is required — works with any Firefox version.*
 
 ### Method 2: Install as a Permanent Extension (.xpi file)
-[cite_start]Installing via `.xpi` makes the extension permanent — it survives Firefox restarts and behaves like any extension installed from the Firefox Add-ons store[cite: 29]. [cite_start]I recommend for this Firefox Developer Edition <3[cite: 38].
+Installing via `.xpi` makes the extension permanent — it survives Firefox restarts and behaves like any extension installed from the Firefox Add-ons store. I recommend for this Firefox Developer Edition <3.
 
 **STEP 1 — Allow unsigned extensions (One-time setting):**
-1. [cite_start]Open Firefox and go to: `about:config`[cite: 31].
-2. [cite_start]Accept the warning if prompted[cite: 31].
-3. [cite_start]Search for: `xpinstall.signatures.required`[cite: 32].
-4. [cite_start]Double-click it to set the value to: `false`[cite: 32].
-5. [cite_start]Close the tab[cite: 32].
+1. Open Firefox and go to: `about:config`.
+2. Accept the warning if prompted.
+3. Search for: `xpinstall.signatures.required`.
+4. Double-click it to set the value to: `false`.
+5. Close the tab.
 
 **STEP 2 — Install the .xpi file:**
-1. [cite_start]Open Firefox and go to: `about:addons`[cite: 33].
-2. [cite_start]Click the gear icon (⚙) in the top right corner[cite: 33].
-3. [cite_start]Select "Install Add-on From File..."[cite: 34].
-4. [cite_start]Navigate to the `.xpi` file and select it[cite: 34].
-5. [cite_start]Click "Add" when Firefox asks for confirmation[cite: 35].
+1. Open Firefox and go to: `about:addons`.
+2. Click the gear icon (⚙) in the top right corner.
+3. Select "Install Add-on From File...".
+4. Navigate to the `.xpi` file and select it.
+5. Click "Add" when Firefox asks for confirmation.
 
-[cite_start]*Note: To remove it, go to `about:addons` and click "Remove" next to the extension[cite: 37].*
+*Note: To remove it, go to `about:addons` and click "Remove" next to the extension.*
 
 ---
 
@@ -49,36 +49,36 @@ A Firefox browser extension for Vinted that lets you search for two items at onc
 Rozszerzenie do przeglądarki Firefox dla platformy Vinted. Pozwala na jednoczesne wyszukiwanie dwóch różnych przedmiotów u tego samego sprzedawcy. Po prostu wpisz Przedmiot A i Przedmiot B, wybierz kategorię, a wtyczka znajdzie dla Ciebie gotowe zestawy.
 
 ### Tymczasowe vs Stałe rozszerzenie — Jaka jest różnica?
-* [cite_start]**Tymczasowe rozszerzenie:** Ładowane bezpośrednio z folderu na Twoim komputerze[cite: 16]. [cite_start]Usuwane automatycznie za każdym razem, gdy zamykasz Firefoksa[cite: 17]. [cite_start]Nie wymaga instalacji — wystarczy wskazać Firefoksowi plik `manifest.json`[cite: 18]. [cite_start]Działa na wszystkich wersjach Firefoksa bez żadnych zmian w konfiguracji[cite: 20].
-* [cite_start]**Stałe rozszerzenie:** Instalowane raz i pozostaje aktywne na stałe, nawet po restartach Firefoksa[cite: 21]. [cite_start]Wymaga jednorazowej zmiany w `about:config`, aby zezwolić na niepodpisane rozszerzenia (`xpinstall.signatures.required` → `false`)[cite: 23]. [cite_start]Łatwiejsze w codziennym użytku[cite: 24].
+* **Tymczasowe rozszerzenie:** Ładowane bezpośrednio z folderu na Twoim komputerze. Usuwane automatycznie za każdym razem, gdy zamykasz Firefoksa. Nie wymaga instalacji — wystarczy wskazać Firefoksowi plik `manifest.json`. Działa na wszystkich wersjach Firefoksa bez żadnych zmian w konfiguracji.
+* **Stałe rozszerzenie:** Instalowane raz i pozostaje aktywne na stałe, nawet po restartach Firefoksa. Wymaga jednorazowej zmiany w `about:config`, aby zezwolić na niepodpisane rozszerzenia (`xpinstall.signatures.required` → `false`). Łatwiejsze w codziennym użytku.
 
 ### Metoda 1: Instalacja Tymczasowa
-[cite_start]Tymczasowe rozszerzenia są ładowane bezpośrednio z folderu na Twoim komputerze[cite: 55]. [cite_start]Działają do momentu zamknięcia Firefoksa — potem musisz załadować je ponownie ręcznie[cite: 56].
+Tymczasowe rozszerzenia są ładowane bezpośrednio z folderu na Twoim komputerze. Działają do momentu zamknięcia Firefoksa — potem musisz załadować je ponownie ręcznie.
 
 **Kroki:**
-1. [cite_start]Otwórz Firefoksa i przejdź do: `about:debugging`[cite: 57].
-2. [cite_start]Kliknij "Ten program Firefox" na lewym pasku bocznym[cite: 57].
-3. [cite_start]Kliknij przycisk "Załaduj tymczasowy dodatek..."[cite: 58].
-4. [cite_start]Przejdź do folderu, w którym wypakowałeś `vinted-multi-search`[cite: 58].
-5. [cite_start]Wybierz plik: `manifest.json`[cite: 59].
+1. Otwórz Firefoksa i przejdź do: `about:debugging`.
+2. Kliknij "Ten program Firefox" na lewym pasku bocznym.
+3. Kliknij przycisk "Załaduj tymczasowy dodatek...".
+4. Przejdź do folderu, w którym wypakowałeś `vinted-multi-search`.
+5. Wybierz plik: `manifest.json`.
 
-[cite_start]*Uwaga: Nie wymaga podpisywania ani zatwierdzania — działa z każdą wersją Firefoksa[cite: 61].*
+*Uwaga: Nie wymaga podpisywania ani zatwierdzania — działa z każdą wersją Firefoksa.*
 
 ### Metoda 2: Instalacja Stała (plik .xpi)
-[cite_start]Instalacja z pliku `.xpi` sprawia, że rozszerzenie jest stałe — przetrwa restarty Firefoksa[cite: 38]. [cite_start]Polecam do tego Firefox Developer Edition <3[cite: 46].
+Instalacja z pliku `.xpi` sprawia, że rozszerzenie jest stałe — przetrwa restarty Firefoksa. Polecam do tego Firefox Developer Edition <3.
 
 **KROK 1 — Zezwól na niepodpisane rozszerzenia (Jednorazowo):**
-1. [cite_start]Otwórz Firefoksa i przejdź do: `about:config`[cite: 40].
-2. [cite_start]Zaakceptuj ostrzeżenie, jeśli się pojawi[cite: 40].
-3. [cite_start]Wyszukaj: `xpinstall.signatures.required`[cite: 41].
-4. [cite_start]Kliknij dwukrotnie, aby ustawić wartość na: `false`[cite: 41].
-5. [cite_start]Zamknij kartę[cite: 41].
+1. Otwórz Firefoksa i przejdź do: `about:config`.
+2. Zaakceptuj ostrzeżenie, jeśli się pojawi.
+3. Wyszukaj: `xpinstall.signatures.required`.
+4. Kliknij dwukrotnie, aby ustawić wartość na: `false`.
+5. Zamknij kartę.
 
 **KROK 2 — Zainstaluj plik .xpi:**
-1. [cite_start]Otwórz Firefoksa i przejdź do: `about:addons`[cite: 42].
-2. [cite_start]Kliknij ikonę koła zębatego (⚙) w prawym górnym rogu[cite: 42].
-3. [cite_start]Wybierz "Zainstaluj dodatek z pliku..."[cite: 43].
-4. [cite_start]Przejdź do pliku `.xpi` i wybierz go[cite: 43].
-5. [cite_start]Kliknij "Dodaj", gdy Firefox poprosi o potwierdzenie[cite: 44].
+1. Otwórz Firefoksa i przejdź do: `about:addons`.
+2. Kliknij ikonę koła zębatego (⚙) w prawym górnym rogu.
+3. Wybierz "Zainstaluj dodatek z pliku...".
+4. Przejdź do pliku `.xpi` i wybierz go.
+5. Kliknij "Dodaj", gdy Firefox poprosi o potwierdzenie.
 
-[cite_start]*Uwaga: Aby usunąć rozszerzenie, przejdź do `about:addons` i kliknij "Usuń" obok rozszerzenia[cite: 46].*
+*Uwaga: Aby usunąć rozszerzenie, przejdź do `about:addons` i kliknij "Usuń" obok rozszerzenia.*
