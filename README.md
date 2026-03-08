@@ -85,3 +85,6 @@ Instalacja z pliku `.xpi` sprawia, że rozszerzenie jest stałe — przetrwa res
 
 Screenshots
 <img width="1919" height="918" alt="obraz" src="https://github.com/user-attachments/assets/9166981c-5ef5-4174-a4c9-fb7a0a495b42" />
+
+<img width="1918" height="914" alt="obraz" src="https://github.com/user-attachments/assets/293425fe-dd09-4ca4-b7d0-17aa3ca38f38" />
+
