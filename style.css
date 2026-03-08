@@ -1,0 +1,298 @@
+#vms-panel {
+    background-color: #edf2f2;
+    padding: 10px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    z-index: 9999;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.vms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Tytuł "Szukaj zestawu" */
+.vms-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #676c6f;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.vms-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: stretch;
+}
+
+.vms-catpicker {
+    position: relative;
+    width: 185px;
+}
+
+.vms-catbtn {
+    width: 100%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dde6e6;
+    color: #676c6f;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 36px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.vms-catbtn:hover { background-color: #cfdada; }
+
+.vms-catdrawer {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 240px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #edf2f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    z-index: 99999;
+    padding: 4px 0;
+}
+
+.vms-dd-reset {
+    padding: 7px 12px;
+    font-size: 12px;
+    color: #9aa0a3;
+    cursor: pointer;
+    border-bottom: 1px solid #dde6e6;
+    margin-bottom: 2px;
+    background: #edf2f2;
+}
+.vms-dd-reset:hover { background: #dde6e6; color: #007680; }
+
+.vms-dd-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
+    user-select: none;
+    transition: background 0.1s;
+    background: #edf2f2; /* level 0 */
+}
+.vms-dd-item[data-level="1"] { background: #e0e9e9; }
+.vms-dd-item[data-level="2"] { background: #d4e2e2; }
+.vms-dd-item[data-level="3"] { background: #c8dbdb; }
+.vms-dd-item[data-level="4"] { background: #bcd4d4; }
+.vms-dd-item[data-level="5"] { background: #b0cdcd; }
+
+.vms-dd-item:hover { filter: brightness(0.96); }
+.vms-dd-item--selected { color: #007680; font-weight: 600; }
+
+.vms-dd-arrow {
+    font-size: 9px;
+    color: #9aa0a3;
+    width: 14px;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 2px;
+    border-radius: 3px;
+    transition: background 0.1s;
+}
+.vms-dd-arrow:not(.vms-dd-arrow--leaf):hover { background: #dde6e6; color: #007680; }
+.vms-dd-arrow--leaf { visibility: hidden; }
+
+.vms-dd-label { flex: 1; }
+
+.vms-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.vms-container input[type="text"] {
+    padding: 0 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dde6e6;
+    color: #676c6f;
+    font-size: 14px;
+    outline: none;
+    width: 185px;
+    height: 36px;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+.vms-container input[type="text"]::placeholder {
+    color: #9aa0a3;
+}
+
+.vms-container input[type="text"]:focus {
+    background-color: #cfdada;
+}
+
+.vms-plus {
+    font-weight: bold;
+    font-size: 16px;
+    color: #676c6f;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.vms-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Przycisk główny */
+#vms-search-btn {
+    padding: 8px 16px;
+    background-color: #edf2f2;
+    color: #007680;
+    border: 1.5px solid #007680;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+#vms-search-btn:hover {
+    background-color: #007680;
+    color: #fff;
+}
+
+#vms-search-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* Przyciski pomocnicze (Pauza, Anuluj) */
+#vms-pause-btn,
+#vms-cancel-btn {
+    padding: 7px 14px;
+    background-color: transparent;
+    color: #676c6f;
+    border: 1.5px solid #676c6f;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#vms-pause-btn:hover,
+#vms-cancel-btn:hover {
+    background-color: #dde6e6;
+}
+
+/* Status */
+.vms-status {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #676c6f;
+    padding: 4px 0;
+}
+
+.vms-error {
+    color: #c0392b;
+}
+
+/* Wyniki */
+.vms-results {
+    width: 100%;
+    padding-top: 6px;
+}
+
+.vms-found-count {
+    font-size: 13px;
+    color: #676c6f;
+    margin: 0 0 6px 0;
+    text-align: center;
+}
+
+.vms-found-count strong {
+    color: #007680;
+}
+
+.vms-no-results {
+    font-size: 13px;
+    color: #9aa0a3;
+    text-align: center;
+}
+
+.vms-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.vms-list li {
+    font-size: 13px;
+    color: #676c6f;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 4px 8px;
+    background: #dde6e6;
+    border-radius: 8px;
+}
+
+.vms-seller {
+    font-weight: 600;
+    color: #007680;
+    text-decoration: none;
+}
+
+.vms-seller:hover {
+    text-decoration: underline;
+}
+
+.vms-counts {
+    color: #9aa0a3;
+    font-size: 12px;
+}
+
+.vms-total-price {
+    font-weight: 700;
+    color: #007680;
+    white-space: nowrap;
+}
+
+.vms-item {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.vms-item:hover {
+    border-bottom-color: #007680;
+    color: #007680;
+}
+
+

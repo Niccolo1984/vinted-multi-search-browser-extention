@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Vinted Multi-Search",
+  "version": "3.0",
+  "description": "Wyszukuj zestawy przedmiotów u jednego sprzedawcy na Vinted.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "vinted-multi-search@twoj-mail.com"
+    }
+  },
+  "permissions": [],
+  "host_permissions": [
+    "*://*.vinted.pl/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.vinted.pl/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
